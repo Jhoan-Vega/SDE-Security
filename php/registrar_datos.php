@@ -17,10 +17,7 @@ $insertar="INSERT INTO usuario(user,pass,fecha_reg_usu,idEmpleado,idPermisos,ids
 //ejecutar consulta
 $resultado_insertar=mysqli_query($conexion,$insertar);
 if(!$resultado_insertar){
-    echo '<script>
-        alert("El usuario ya esta registrado");
-        window.history.go(-1)
-        </script>';
+    header("location:usuario.php");
 }else{
     echo '<script>
         alert("SE REGISTRO EXITOSAMENTE");

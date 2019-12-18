@@ -10,8 +10,9 @@
     <title>Añadir Usuarios</title>
 
     <!-- Bootstrap core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-
+   
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     <style>
       .bd-placeholder-img {
@@ -162,16 +163,31 @@
               <?php }?> 
             </select>
           </div>
-          <input type="submit" value="Registrar" class="btn btn-danger" >
+          <input type="submit" value="Registrar" class="btn btn-danger" id="alerta">
       </form>
     </main>
   </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/jquery-slim.min.js"><\/script>')</script><script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/jquery.min.js"><\/script>')</script><script src="js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/habilitar.js"></script>
+        
+        <script>
+          const alerta = document.querySelector('#alerta')
+
+          alerta.addEventListener('click',()=>{
+            Command: toastr["success"]("Usuario Registrado con exito")
+
+          toastr.options = {
+
+            "positionClass": "toast-bottom-right",
+          
+          }
+          })          
+        </script>
         </body>
 </html>

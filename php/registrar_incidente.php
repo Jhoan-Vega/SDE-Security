@@ -21,10 +21,7 @@ if(!$resultado_insertar){
         window.history.go(-2)
         </script>';
 }else{
-    echo '<script>
-        alert("SE REGISTRO EXITOSAMENTE");
-        window.history.go(-2)
-        </script>';
+    header("location:usuario.php");
 }
 
 //cerrar conexion

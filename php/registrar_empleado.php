@@ -30,10 +30,7 @@ if(!$resultado_insertar){
         window.history.go(-1)
         </script>';
 }else{
-    echo '<script>
-        alert("SE REGISTRO EXITOSAMENTE");
-        window.history.go(-1)
-        </script>';
+    header("location:usuario.php");
 }
 
 //cerrar conexion
