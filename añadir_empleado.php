@@ -7,11 +7,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Usuarios</title>
+    <title>Añadir Empleado</title>
 
     <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     <style>
       .bd-placeholder-img {
@@ -37,7 +37,7 @@
   <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Security Admin</a>
   <ul class="navbar-nav px-3">
     <li class="nav-item text-nowrap">
-      <a class="nav-link" href="login.php"><span data-feather="arrow-left"></span> Salir</a>
+      <a class="nav-link" href="index.php"><span data-feather="arrow-left"></span> Salir</a>
     </li>
   </ul>
 </nav>
@@ -146,7 +146,7 @@
 
           <div class="form-group">
           <label>Telefono:</label>
-          <input type="tel" class="form-control" id="telf_empl" name="telf_empl" placeholder="Telefono" required>
+          <input type="tel" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="telf_empl" name="telf_empl" placeholder="Telefono" required>
           </div>
 
           <div class="form-group">
@@ -161,17 +161,19 @@
 
           <div class="form-group">
           <label>DNI:</label>
-          <input type="text" class="form-control" id="dni_empl" name="dni_empl" placeholder="DNI" required>
+          <input type="numeric" class="form-control" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="dni_empl" name="dni_empl" placeholder="DNI" required>
           </div>
 
-          <input type="submit" value="Registrar" class="btn btn-danger" >
+          <input type="submit" value="Registrar" class="btn btn-danger" id="alerta" >
       </form>
     </main>
   </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/jquery-slim.min.js"><\/script>')</script><script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/jquery.min.js"><\/script>')</script><script src="js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-        <script src="js/main.js"></script></body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="js/main.js"></script>        
+        </body>
 </html>

@@ -37,7 +37,7 @@
   <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Security Admin</a>
   <ul class="navbar-nav px-3">
     <li class="nav-item text-nowrap">
-      <a class="nav-link" href="login.php"><span data-feather="arrow-left"></span> Salir</a>
+      <a class="nav-link" href="index.php"><span data-feather="arrow-left"></span> Salir</a>
     </li>
   </ul>
 </nav>

@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Usuarios</title>
+    <title>Añadir Incidente</title>
 
     <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -37,7 +37,7 @@
   <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Security Admin</a>
   <ul class="navbar-nav px-3">
     <li class="nav-item text-nowrap">
-      <a class="nav-link" href="login.php"><span data-feather="arrow-left"></span> Salir</a>
+      <a class="nav-link" href="index.php"><span data-feather="arrow-left"></span> Salir</a>
     </li>
   </ul>
 </nav>
@@ -112,7 +112,7 @@
     <form method="post" action="php/registrar_incidente.php">
         <h1></h1>
         <h2>Añadir Incidente</h2>
-              
+
           <div class="form-group"> 
           <label>Incidente:</label>
           <input type="text" class="form-control" id="nom_inc" name="nom_inc" placeholder="Nombre" required>
@@ -175,19 +175,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
         <script src="js/main.js"></script>
 
-        <script>
-          const alerta = document.querySelector('#alerta')
-
-          alerta.addEventListener('click',()=>{
-            Command: toastr["success"]("Usuario Registrado con exito")
-
-          toastr.options = {
-
-            "positionClass": "toast-bottom-right",
-          
-          }
-          })          
-        </script>
-
+        
         </body>
 </html>

@@ -14,7 +14,7 @@ $insertar="INSERT INTO empleado(nom_empl,ape_empl,idcargos,telf_empl,dir_empl,ci
             values('$nom_empl','$ape_empl','$idcargos','$telf_empl','$dir_empl','$ciudad_empl','$dni_empl')";
 
 //verificar
-$verificar_empleado = mysqli_query($conexion,"SELECT * FROM empleado WHERE idEmpleado = '$idEmpleado'");
+$verificar_empleado = mysqli_query($conexion,"SELECT * FROM empleado WHERE dni_empl = '$dni_empl'");
 if(mysqli_num_rows($verificar_empleado)>0){
     echo '<script>
           alert("El empleado ya esta registrado");
@@ -30,7 +30,7 @@ if(!$resultado_insertar){
         window.history.go(-1)
         </script>';
 }else{
-    header("location:usuario.php");
+    header("location:../usuario.php");   
 }
 
 //cerrar conexion

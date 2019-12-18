@@ -13,16 +13,24 @@ $idsub_permisos = $_POST["idsub_permisos"];
 $insertar="INSERT INTO usuario(user,pass,fecha_reg_usu,idEmpleado,idPermisos,idsub_permisos) 
             values('$user','$pass','$fecha_reg_usu','$idEmpleado','$idPermisos','$idsub_permisos')";
 
+$verificar_empleado = mysqli_query($conexion,"SELECT * FROM usuario WHERE idEmpleado = '$idEmpleado'");
+if(mysqli_num_rows($verificar_empleado)>0){
+    echo '<script>
+          alert("El empleado ya cuenta con un usuario");
+          window.history.go(-1);
+          </script>';
+    exit;
+}
 
 //ejecutar consulta
 $resultado_insertar=mysqli_query($conexion,$insertar);
 if(!$resultado_insertar){
-    header("location:usuario.php");
-}else{
     echo '<script>
-        alert("SE REGISTRO EXITOSAMENTE");
+        alert("ERROR EN EL REGISTRO");
         window.history.go(-1)
         </script>';
+}else{
+    header("location:../usuario.php");
 }
 //cerrar conexion
 mysqli_close($conexion);

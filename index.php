@@ -11,7 +11,7 @@
 
     <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     <style>
       .bd-placeholder-img {
@@ -45,8 +45,23 @@
       <input type="checkbox" value="remember-me"> Recordar
     </label>
   </div>
-  <input type="submit" class="btn btn-lg btn-primary btn-block" style="background-color:#A7CE44; border-color: #53585C;" value="Ingresar">
+  <input type="submit" class="btn btn-lg btn-primary btn-block" style="background-color:#A7CE44; border-color: #53585C;" value="Ingresar" id="alerta">
   <p class="mt-5 mb-3 text-muted">&copy; Soluciones IV</p>
 </form>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script>
+          const alerta = document.querySelector('#alerta')
+
+          alerta.addEventListener('click',()=>{
+            Command: toastr["info"]("Bienvenido al Sistema SDE")
+          toastr.options = {
+            "positionClass": "toast-top-right",
+          }
+          })          
+        </script>
+
 </body>
 </html>
