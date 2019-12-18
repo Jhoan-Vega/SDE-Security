@@ -11,7 +11,7 @@
 
     <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     <style>
       .bd-placeholder-img {
@@ -112,10 +112,7 @@
     <form method="post" action="php/registrar_incidente.php">
         <h1></h1>
         <h2>Añadir Incidente</h2>
-          <div class="form-group">      
-          <input type="text" class="form-control" id="idIncidentes" name="idIncidentes" placeholder="Id" required>
-          </div>
-
+              
           <div class="form-group"> 
           <label>Incidente:</label>
           <input type="text" class="form-control" id="nom_inc" name="nom_inc" placeholder="Nombre" required>
@@ -166,14 +163,31 @@
               <?php }?> 
             </select>
           </div>
-          <input type="submit" value="Registrar" class="btn btn-danger" >
+          <input type="submit" value="Registrar" class="btn btn-danger" id="alerta">
       </form>
     </main>
   </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/jquery-slim.min.js"><\/script>')</script><script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/jquery.min.js"><\/script>')</script><script src="js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-        <script src="js/main.js"></script></body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="js/main.js"></script>
+
+        <script>
+          const alerta = document.querySelector('#alerta')
+
+          alerta.addEventListener('click',()=>{
+            Command: toastr["success"]("Usuario Registrado con exito")
+
+          toastr.options = {
+
+            "positionClass": "toast-bottom-right",
+          
+          }
+          })          
+        </script>
+
+        </body>
 </html>
